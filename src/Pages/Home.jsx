@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
 
@@ -8,6 +9,11 @@ export const Home = () => {
     const [fotos, setFotos] = useState([])
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(true);
+
+    const navigate = useNavigate()
+    const handleBack = () => {
+        navigate('/post')
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -78,6 +84,8 @@ export const Home = () => {
                     <p>Nenhuma frase encontrada.</p>
                 )}
             </ul>
+
+            <button onClick={handleBack}>postar</button>
         </div>
     )
 }
