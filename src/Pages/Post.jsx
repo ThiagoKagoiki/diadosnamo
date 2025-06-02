@@ -7,9 +7,9 @@ export const Post = () => {
     const API_URL_FOTOS = 'https://682e655d746f8ca4a47ce3de.mockapi.io/api/v1/fotos'
 
     const [frases, setFrases] = useState([])
-    const [url, setUrl] = useState([])
+    // const [url, setUrl] = useState([])
     const [msgFrase, setMsgFrase] = useState('')
-    const [msgFoto, setMsgFoto] = useState('')
+    // const [msgFoto, setMsgFoto] = useState('')
     const navigate = useNavigate()
 
     const handleBack = () => {
@@ -48,35 +48,35 @@ export const Post = () => {
     }
 
 
-    const handleSubmitFoto = async(e) => {
-        e.preventDefault()
+    // const handleSubmitFoto = async(e) => {
+    //     e.preventDefault()
 
-        fetch(API_URL_FOTOS, {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify({url})
-        })
+    //     fetch(API_URL_FOTOS, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify({url})
+    //     })
 
-            .then((response) => {
-                if(!response.ok){
-                    throw new Error('Erro ao enviar url')
-                }
+    //         .then((response) => {
+    //             if(!response.ok){
+    //                 throw new Error('Erro ao enviar url')
+    //             }
 
-                return response.json()
-            })
+    //             return response.json()
+    //         })
 
-            .then((data) => {
-                setUrl('')
-                console.log(url)
-                setMsgFoto('URL enviada com sucesso')
-            })
-            .catch((error) => {
-                console.error('Erro ao enviar frase: ', error)
-                setMsgFoto('Erro ao enviar url')
-            })
-    }
+    //         .then((data) => {
+    //             setUrl('')
+    //             console.log(url)
+    //             setMsgFoto('URL enviada com sucesso')
+    //         })
+    //         .catch((error) => {
+    //             console.error('Erro ao enviar frase: ', error)
+    //             setMsgFoto('Erro ao enviar url')
+    //         })
+    // }
 
 
 
@@ -84,12 +84,12 @@ export const Post = () => {
 
     return(
         <div>
-            <form onSubmit={handleSubmitFoto}>
+            {/* <form onSubmit={handleSubmitFoto}>
                 <label htmlFor="">URL da imagem:</label>
                 <input type="text" onChange={(e) => setUrl(e.target.value)} value={url}/>
                 <button>enviar</button>
             </form>
-            {msgFoto && <p>{msgFoto}</p>}
+            {msgFoto && <p>{msgFoto}</p>} */}
 
             <form onSubmit={handleSubmitFrase}>
                 <label htmlFor="">Frase:</label>

@@ -1,0 +1,18 @@
+.tudo{
+    display: flex;
+    flex-direction: row;
+}
+
+.foto-frase{
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes{
+    max-height: 100px;
+    margin: 50px;
+}
+
+.title{
+    font-size: 20px;
+}
