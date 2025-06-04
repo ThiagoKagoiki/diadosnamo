@@ -155,7 +155,7 @@
 
                 <div className="foto-frase">
 
-                <h1 className="title">Um "albúm de fotos" para o meu bem...</h1>
+                <h1 className="title">Um "álbum de fotos" para o meu bem...</h1>
                 
                 {fotoAleatoria ? (
                     <div>
